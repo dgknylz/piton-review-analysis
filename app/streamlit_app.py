@@ -285,6 +285,17 @@ def apply_theme() -> None:
             padding-bottom: 2.5rem;
             max-width: 1400px;
         }
+        header[data-testid="stHeader"] {
+            background: #f6f9ff;
+            color: var(--ink);
+            box-shadow: none;
+        }
+        div[data-testid="stToolbar"] {
+            color: var(--ink);
+        }
+        div[data-testid="stDecoration"] {
+            background: #2563eb;
+        }
         section[data-testid="stSidebar"] {
             background: #ffffff;
             border-right: 1px solid var(--line);
