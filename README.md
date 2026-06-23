@@ -195,7 +195,7 @@ Asagidaki adimlar sifirdan indiren bir kullanicinin projeyi calistirmasi icindir
 ### 1. Repoyu indirin
 
 ```bash
-git clone <GITHUB_REPO_LINKI>
+git clone https://github.com/dgknylz/piton-review-analysis.git
 cd piton-review-analysis
 ```
 
@@ -455,7 +455,7 @@ git init
 git add .
 git commit -m "Add customer review analysis dashboard"
 git branch -M main
-git remote add origin <GITHUB_REPO_LINKI>
+git remote add origin https://github.com/dgknylz/piton-review-analysis.git
 git push -u origin main
 ```
 
@@ -472,5 +472,5 @@ video_script.md
 Video linki buraya eklenebilir:
 
 ```text
-TODO: Video demo linki
+Video demo linki kayit tamamlandiktan sonra buraya eklenecektir.
 ```
