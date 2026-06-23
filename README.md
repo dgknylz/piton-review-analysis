@@ -16,6 +16,7 @@ Bu proje yalnizca tek bir yorum tahmin eden basit bir demo degildir. Ana ekran, 
 - [Dataset Hazirlama](#dataset-hazirlama)
 - [Model Egitimi ve Rapor Uretimi](#model-egitimi-ve-rapor-uretimi)
 - [Streamlit Dashboard Kullanimi](#streamlit-dashboard-kullanimi)
+- [Canli Yayina Alma](#canli-yayina-alma)
 - [Veri Kaynagi Secimi](#veri-kaynagi-secimi)
 - [Moduller Ne Ise Yarar](#moduller-ne-ise-yarar)
 - [Teknik Kararlar](#teknik-kararlar)
@@ -334,6 +335,70 @@ python -m src.data_loader
 python -m src.train
 ```
 
+## Canli Yayina Alma
+
+Bu proje Streamlit dashboard oldugu icin en kolay yayinlama secenegi Streamlit Community Cloud'dur. Render da desteklenir.
+
+Canli yayin icin repo icinde gerekli dosyalar hazirdir:
+
+```text
+app/streamlit_app.py
+requirements.txt
+runtime.txt
+.streamlit/config.toml
+data/processed/clean_reviews.csv
+outputs/models/best_sentiment_model.joblib
+render.yaml
+```
+
+`data/raw/` altindaki ham Kaggle TSV dosyasi canli yayina gerekmedigi icin repo'ya eklenmez. Canli uygulama temizlenmis 30.000 satirlik ornek dataset ve egitilmis modeli kullanir.
+
+### Streamlit Community Cloud ile yayinlama
+
+1. GitHub reposunu public yapin.
+2. Streamlit Community Cloud hesabina girin: `https://share.streamlit.io/`
+3. `New app` secin.
+4. Repository olarak `dgknylz/piton-review-analysis` reposunu secin.
+5. Branch olarak `main` secin.
+6. Main file path alanina sunu yazin:
+
+```text
+app/streamlit_app.py
+```
+
+7. Deploy butonuna basin.
+
+Deploy bittiginde Streamlit size public bir URL verir. Bu linki README'deki video/demo bolumune veya teslim mailine ekleyebilirsiniz.
+
+### Render ile yayinlama
+
+Render kullanmak isterseniz repo icinde `render.yaml` dosyasi hazirdir.
+
+1. Render hesabina girin.
+2. `New` -> `Blueprint` secin.
+3. GitHub reposu olarak `dgknylz/piton-review-analysis` secin.
+4. Render `render.yaml` dosyasini okuyup web service ayarlarini otomatik alir.
+
+Manuel web service acarsaniz:
+
+```text
+Build Command:
+pip install -r requirements.txt
+
+Start Command:
+streamlit run app/streamlit_app.py --server.address 0.0.0.0 --server.port $PORT
+```
+
+### Deploy sonrasi kontrol
+
+Canli link acildiktan sonra sunlari kontrol edin:
+
+- Ana sayfada `Satıcı Yorum Zekası` basligi gorunuyor mu?
+- Sidebar'da `Default Project Dataset` secili mi?
+- Genel Bakis metrikleri geliyor mu?
+- `Yorum Alan Urunler` tablosu aciliyor mu?
+- `Tekil Yorum Testi` sekmesinde tahmin calisiyor mu?
+
 ## Veri Kaynagi Secimi
 
 Sidebar'da iki veri kaynagi vardir:
@@ -442,8 +507,9 @@ GitHub'a yuklemeden once kontrol listesi:
 - `README.md` dolu ve Markdown formatinda.
 - `docs/screenshots/` altinda dashboard ekran goruntuleri var.
 - `requirements.txt` mevcut.
-- `.gitignore` buyuk veri, sanal ortam ve model ciktilarini repo disinda tutuyor.
-- `data/raw/` ve `data/processed/` klasorlerinde `.gitkeep` var; klasor yapisi GitHub'da gorunur.
+- `.gitignore` ham veri, sanal ortam, loglar ve gereksiz ciktilari repo disinda tutuyor.
+- Canli demo icin `data/processed/clean_reviews.csv` ve `outputs/models/best_sentiment_model.joblib` repo icinde tutulur.
+- `data/raw/` ve `outputs/reports/` klasorlerinde `.gitkeep` var; klasor yapisi GitHub'da gorunur.
 - Ham Kaggle dataseti GitHub'a yuklenmez; README kurulumda nasil indirilecegini anlatir.
 - `.venv/` GitHub'a yuklenmez.
 - Video linki hazir olunca README'deki [Video Demo](#video-demo) bolumune eklenir.

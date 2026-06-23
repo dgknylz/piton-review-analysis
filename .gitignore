@@ -3,10 +3,12 @@ data/raw/*
 !data/raw/.gitkeep
 data/processed/*
 !data/processed/.gitkeep
+!data/processed/clean_reviews.csv
 
 *.zip
 *.tsv
 *.csv
+!data/processed/clean_reviews.csv
 !data/sample_seller_catalog.csv
 !data/sample_uploaded_test_dataset.csv
 *.gz
@@ -22,6 +24,8 @@ venv/
 
 outputs/models/*
 !outputs/models/.gitkeep
+!outputs/models/best_sentiment_model.joblib
+!outputs/models/label_mapping.json
 outputs/reports/*
 !outputs/reports/.gitkeep
 
