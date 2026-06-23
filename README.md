@@ -4,8 +4,15 @@ Piton Technology teknik case'i icin hazirlanmis, NLP ve fuzzy logic kullanan sat
 
 Bu proje yalnizca tek bir yorum tahmin eden basit bir demo degildir. Ana ekran, bir e-ticaret saticisinin yorum almis urunlerini izlemesi, riskli urunleri belirlemesi, sikayet konularini ozetlemesi ve yorum guvenilirligini fuzzy logic ile yorumlamasi icin tasarlanmis bir Streamlit dashboard'dur.
 
+## Canli Demo
+
+Uygulamayi tarayicida acmak icin:
+
+[https://piton-review-analysis-pxq3gf5oehhicoqczsmappe.streamlit.app/](https://piton-review-analysis-pxq3gf5oehhicoqczsmappe.streamlit.app/)
+
 ## Icindekiler
 
+- [Canli Demo](#canli-demo)
 - [Proje Amaci](#proje-amaci)
 - [Canli Uygulama Mantigi](#canli-uygulama-mantigi)
 - [Ekran Goruntuleri](#ekran-goruntuleri)
