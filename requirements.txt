@@ -1,0 +1,14 @@
+pandas
+numpy
+scikit-learn
+matplotlib
+seaborn
+nltk
+scikit-fuzzy
+networkx
+streamlit
+joblib
+jupyter==1.0.0
+notebook<7
+ipywidgets<8
+pytest

@@ -1,0 +1,5 @@
+product_id,product_title,product_category,star_rating,review_headline,review_body,review_date,helpful_votes,total_votes,verified_purchase
+TEST-REV-001,Bluetooth Speaker,Electronics,1,Battery problem,"Battery died after one day and the sound quality is poor.",2026-01-12,2,3,Y
+TEST-REV-002,Wireless Mouse,Electronics,5,Works well,"Easy to connect, smooth tracking, and good battery life.",2026-02-04,1,1,Y
+TEST-REV-003,USB-C Cable,Electronics,,,,,,,
+TEST-REV-004,Portable Charger,Electronics,2,Stopped charging,"It stopped charging my phone after a week.",2026-03-16,4,5,Y
