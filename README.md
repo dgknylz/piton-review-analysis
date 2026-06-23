@@ -9,6 +9,7 @@ Bu proje yalnizca tek bir yorum tahmin eden basit bir demo degildir. Ana ekran, 
 - [Proje Amaci](#proje-amaci)
 - [Canli Uygulama Mantigi](#canli-uygulama-mantigi)
 - [Ekran Goruntuleri](#ekran-goruntuleri)
+- [Analiz Grafikleri ve Model Sonuclari](#analiz-grafikleri-ve-model-sonuclari)
 - [Teknik Ozellikler](#teknik-ozellikler)
 - [Dosya Yapisi](#dosya-yapisi)
 - [Kurulum](#kurulum)
@@ -94,6 +95,40 @@ Low Risk    -> diger durumlar
 ### Tekil Yorum Testi
 
 ![Tekil Yorum Testi](docs/screenshots/06-single-review-test.png)
+
+## Analiz Grafikleri ve Model Sonuclari
+
+Bu bolum, veri setinin yapisini ve model performansini GitHub uzerinde hizli incelemek icin eklenmistir. Grafikler egitim ve EDA pipeline'i tarafindan uretilmistir.
+
+### EDA Grafikleri
+
+| Rating Distribution | Sentiment Distribution |
+|---|---|
+| ![Rating Distribution](outputs/figures/rating_distribution.png) | ![Sentiment Distribution](outputs/figures/sentiment_distribution.png) |
+
+| Review Length Distribution | Review Age Distribution |
+|---|---|
+| ![Review Length Distribution](outputs/figures/review_length_distribution.png) | ![Review Age Distribution](outputs/figures/review_age_distribution.png) |
+
+| Missing Values |
+|---|
+| ![Missing Values](outputs/figures/missing_values.png) |
+
+### Confusion Matrix Grafikleri
+
+| Optimized Best Model | Logistic Regression | Random Forest |
+|---|---|---|
+| ![Best Model Confusion Matrix](outputs/figures/confusion_matrix_best_model.png) | ![Logistic Regression Confusion Matrix](outputs/figures/confusion_matrix_logistic_regression.png) | ![Random Forest Confusion Matrix](outputs/figures/confusion_matrix_random_forest.png) |
+
+### Model Metrikleri
+
+| Model | Accuracy | Macro F1 | Weighted F1 |
+|---|---:|---:|---:|
+| Optimized Logistic Regression | 0.865 | 0.719 | 0.872 |
+| Logistic Regression | 0.854 | 0.714 | 0.865 |
+| Random Forest | 0.849 | 0.605 | 0.818 |
+
+Accuracy tek basina yeterli olmadigi icin model karsilastirmasinda macro F1 ve weighted F1 de raporlanmistir. Optimize Logistic Regression modeli final dashboard'da kullanilan en iyi modeldir.
 
 ## Teknik Ozellikler
 
