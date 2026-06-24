@@ -536,14 +536,12 @@ Repo public yapildiktan sonra link teslim mailine eklenebilir.
 
 ## Video Demo
 
-Video demo icin hazir anlatim metni:
+Projenin kisa demo ve anlatim videosu:
+
+[YouTube Demo Videosu](https://youtu.be/y3LZntt12Yo)
+
+Video anlatim metni:
 
 ```text
 video_script.md
-```
-
-Video linki buraya eklenebilir:
-
-```text
-Video demo linki kayit tamamlandiktan sonra buraya eklenecektir.
 ```
